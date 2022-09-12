@@ -2,10 +2,14 @@
 
 function UpdateFollowStatus(event) {
   let followStatus = followButton.innerHTML;
-  if (followStatus == "follow") {
-    followButton.innerHTML = "following";
+  if (followStatus == `<i class="fa-solid fa-eye"></i> follow`) {
+    followButton.innerHTML = `<i class="fa-solid fa-check"></i> following`;
+    followButton.style.backgroundColor = "black";
+    followButton.style.color = "white";
   } else {
-    followButton.innerHTML = "follow";
+    followButton.innerHTML = `<i class="fa-solid fa-eye"></i> follow`;
+    followButton.style.backgroundColor = "#f3f3f3";
+    followButton.style.color = "#555555";
   }
 }
 

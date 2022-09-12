@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  width: 850px;
+  width: 900px;
   background-color: white;
   margin: 0 auto;
 }
@@ -20,15 +20,24 @@ body {
   margin-top: 16px;
   margin-bottom: 16px;
   width: 100%;
-  height: 80px;
+  height: 60px;
   font-family: var(--font-family-din);
   font-size: 14px;
   text-decoration: none;
   line-height: 1.6;
 }
 
-.container .header h2 {
+.container .header .artist-name {
   padding-left: 12px;
+  text-decoration: none;
+  color: #111116;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.container .header .artist-name:hover {
+  color: #005580;
 }
 
 #follow-button {
@@ -37,13 +46,19 @@ body {
   background: #f3f3f3;
   color: #555555;
   font-size: 12px;
+  font-family: var(--font-family-din);
   padding: 8px 8px 7px 8px;
   border: 0 none;
-  font-weight: 500;
+  font-weight: 400;
   transition: 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   line-height: 1;
   text-align: center;
   border-radius: 1px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .container .header img {
@@ -63,6 +78,7 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 }
 
 .main .art-title {
@@ -71,6 +87,8 @@ body {
   margin-bottom: 0;
   font-weight: 100;
   font-style: italic;
+  color: white;
+  text-decoration: none;
 }
 
 .main .artist {
@@ -78,11 +96,19 @@ body {
   margin-top: 5px;
   font-family: var(--font-family-din);
   font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none !important;
 }
 
 .container .footer {
   display: flex;
   font-family: "Nanum Myeongjo", serif;
+  width: 100%;
+  height: 300px;
 }
 
 .container .footer .more-information {
@@ -117,6 +143,11 @@ body {
   box-sizing: border-box;
   border: 0 none;
   border-radius: 1px;
+  transition: 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.buy-button:hover {
+  background: #f22148;
 }
 
 .footer .price {
@@ -139,7 +170,12 @@ body {
   margin: 0;
 }
 
-.more-details {
+.footer a {
+  text-decoration: none !important;
+  color: #111116 !important;
+}
+
+.more-details-button {
   color: #111116;
   background-color: transparent;
   border: 3px solid currentColor;
@@ -150,4 +186,9 @@ body {
   padding: 15px 26px 13px;
   margin-top: 16px;
   margin-bottom: 16px;
+  transition: 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.more-details-button:hover {
+  border: 3px solid #757575;
 }
