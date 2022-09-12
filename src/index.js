@@ -1,7 +1,6 @@
 //Update follow button
 
 function UpdateFollowStatus(event) {
-  let followStatus = followButton.innerHTML;
   if (followStatus == `<i class="fa-solid fa-eye"></i> follow`) {
     followButton.innerHTML = `<i class="fa-solid fa-check"></i> following`;
     followButton.style.backgroundColor = "black";
