@@ -1,17 +1,16 @@
-//Update follow button
-
-function UpdateFollowStatus(event) {
-  if (followStatus == `<i class="fa-solid fa-eye"></i> follow`) {
-    followButton.innerHTML = `<i class="fa-solid fa-check"></i> following`;
-    followButton.style.backgroundColor = "black";
-    followButton.style.color = "white";
-  } else {
-    followButton.innerHTML = `<i class="fa-solid fa-eye"></i> follow`;
-    followButton.style.backgroundColor = "#f3f3f3";
-    followButton.style.color = "#555555";
-  }
+let buttons = document.getElementsByClassName("btn");
+for (btn of buttons) {
+  btn.addEventListener("click", (event) => {
+    if (event.target.classList.contains("follow")) {
+      event.target.classList.remove("follow");
+      event.target.innerHTML = `<i class="fa-solid fa-check"></i> following`;
+      event.target.style.backgroundColor = "black";
+      event.target.style.color = "white";
+    } else {
+      event.target.classList.add("follow");
+      event.target.style.backgroundColor = "#f3f3f3";
+      event.target.style.color = "#555555";
+      event.target.innerHTML = `<i class="fa-solid fa-eye"></i> follow`;
+    }
+  });
 }
-
-let followButton = document.querySelector("#follow-button");
-let followStatus = followButton.innerHTML;
-followButton.addEventListener("click", UpdateFollowStatus);
